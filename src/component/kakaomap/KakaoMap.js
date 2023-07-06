@@ -3,7 +3,7 @@ import getUserLocation from "../../function/getUserLocation.js"
 
 const { kakao } = window;
 
-export default function KakaoMap() {
+const KakaoMap = () => {
     
     useEffect(() => {
         getUserLocation()
@@ -43,3 +43,6 @@ export default function KakaoMap() {
         ></div>
     )
 }
+
+
+export default KakaoMap;

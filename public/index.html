@@ -24,16 +24,17 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <!--
-    <script src = "../src/const/mapkey.js"></script>
+
+<!--     
+    <script src = "mapkey.js"></script>
+    <script id = "mapKeyScript"></script>
     <script type="text/javascript">
       const appKey = mapkey;
-      var scriptElement = document.createElement('script');
-      scriptElement.src = '//dapi.kakao.com/v2/maps/sdk.js?appkey=' + appKey;
-      document.body.appendChild(scriptElement);
-    </script>
-  -->
-  <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5089ad092ba73c83f5c8c1bf35117076"></script>
+      document.getElementById("mapKeyScript").src = "//dapi.kakao.com/v2/maps/sdk.js?appkey=" + appKey;
+    </script> -->
+  
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=5089ad092ba73c83f5c8c1bf35117076"></script>
+ 
     <title>React App</title>
   </head>
   <body>
