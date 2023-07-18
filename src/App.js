@@ -1,23 +1,28 @@
-import './App.css';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import { BrowserRouter, Routes, Route,Navigate } from 'react-router-dom';
+import Top from './component/Top';
+import LoginPage from './component/KaKaoLogin/LoginPage';
+import MainPage from './component/Main/MainPage';
 import KakaoMap from './component/kakaomap/KakaoMap';
-import LoginButton from './component/KaKaoLogin/LoginButton';
-import LoginRedirect from './component/KaKaoLogin/LoginRedirect';
+
+
 
 const App = () => {
   return (
-    <div className="App">
+    <div>
       <BrowserRouter>
-        <header className="App-header">
-          <Routes>
-            <Route path="/login" element={<LoginButton />}></Route>
-            <Route path="/" element={<KakaoMap />}></Route>
-            <Route path = "/oauth/callback/kakao" element={<LoginRedirect/>}></Route>
-          </Routes>
-        </header>
+        <Top />
+        <Routes>
+          <Route path="/login" element={<LoginPage />}></Route>
+          <Route path="/" element={<MainPage />}></Route>
+          <Route path = "/map/:mapId" element = {<KakaoMap/>}></Route>
+          <Route path="/oauth2/redirect/*" element = {<Navigate to ="/"></Navigate>}></Route>
+          
+        </Routes>
       </BrowserRouter>
     </div>
   );
 }
+
 
 export default App;

@@ -1,11 +1,8 @@
 import React from "react";
-import { KAKAO_AUTH_URL } from "../../const/OAuth";
+import {KAKAO_AUTH_URL} from '../../const/OAuth';
+
 
 const LoginButton = () => {
-    const handleLogin = () => {
-        window.location.href = KAKAO_AUTH_URL;
-    }
-    return <button onClick={handleLogin}>로그인</button>
+    return <div><a href ={KAKAO_AUTH_URL}>로그인버튼</a></div>
 }
-
 export default LoginButton;

@@ -4,7 +4,6 @@ import getUserLocation from "../../function/getUserLocation.js"
 const { kakao } = window;
 
 const KakaoMap = () => {
-    
     useEffect(() => {
         getUserLocation()
             .then(location => {
@@ -37,10 +36,16 @@ const KakaoMap = () => {
     }, [])
     */
     return (
-        <div
-            id="map"
-            style={{ width: '500px', height: '500px' }}
-        ></div>
+        <div>
+            <div
+                id="map"
+                style={{ width: '500px', height: '500px', display: 'inline-block' }}
+            ></div>
+            <div style={{ display: 'inline-block' }}>
+                <h1>지도제목</h1>
+                <p>마커리스트</p>
+            </div>
+        </div>
     )
 }
 
