@@ -4,6 +4,7 @@ import Top from './component/Top';
 import LoginPage from './component/KaKaoLogin/LoginPage';
 import MainPage from './component/Main/MainPage';
 import KakaoMap from './component/kakaomap/KakaoMap';
+import MyPage from './component/MyPage/MyPage';
 
 
 
@@ -15,6 +16,7 @@ const App = () => {
         <Routes>
           <Route path="/login" element={<LoginPage />}></Route>
           <Route path="/" element={<MainPage />}></Route>
+          <Route path="mypage" element = {<MyPage/>}></Route>
           <Route path = "/map/:mapId" element = {<KakaoMap/>}></Route>
           <Route path="/oauth2/redirect/*" element = {<Navigate to ="/"></Navigate>}></Route>
           
